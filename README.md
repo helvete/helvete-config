@@ -1,2 +1,2 @@
 # helvete-vimrc
-My private .vimrc file
+My config files

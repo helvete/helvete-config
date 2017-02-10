@@ -9,6 +9,8 @@ au FileChangedShell * echo "Warning: File changed on disk"
 " highlighting extra multiple occurences of space char
 highlight ExtraWhitespace ctermbg=gray guibg=gray
 au BufReadPost * match ExtraWhitespace /^\s* \s\s*\|\s\+$/
+" highlight phpt files the way php ones are
+autocmd BufNewFile,BufRead *.phpt set ft=php
 
 " 80 chars ruler colour
 highlight ColorColumn ctermbg=DarkGray
@@ -29,7 +31,7 @@ set preserveindent
 set softtabstop=0
 set shiftwidth=4
 set tabstop=4
-" set expandtab " space mode
+"set expandtab " space mode
 
 " COMMANDS
 " PHP dump sequence
