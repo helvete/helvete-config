@@ -53,6 +53,9 @@ map <F10> :%retab!<CR>
 map <F9> :!/home/user/php53/bin/php -l %<CR>
 " php Main version syntax validation
 map <S-F9> :!php -l %<CR>
+" python syntax validation
+map <S-F12> :!sudo python3 -m py_compile %<CR>
+map <F12> :!python -m py_compile %; rm %c<CR>
 " paste mode toggle
 nnoremap <F8> :set invpaste paste?<CR>
 set pastetoggle=<F8>
