@@ -15,6 +15,12 @@ autocmd BufNewFile,BufRead *.phpt set ft=php
 " 80 chars ruler colour
 highlight ColorColumn ctermbg=DarkGray
 
+" Load directory tree to a new tab on launch; in a very Q&D way ;-)
+autocmd VimEnter * :tabe /tmp/tree
+autocmd VimEnter * :%!find .
+autocmd VimEnter * :tabm
+autocmd VimEnter * :tabfirst
+
 " SETTINGS
 set mouse=a
 set encoding=utf8 " character encoding used inside Vim
@@ -44,6 +50,8 @@ set tabstop=4
 :command Sp2Tb :%s/  /\t/g
 " Convert file type to unix
 :command ToUnix set ff=unix
+" Format json
+:command JSON :%!python -mjson.tool
 
 " MAPPINGS
 map oo o<ESC>
