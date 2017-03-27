@@ -16,10 +16,10 @@ autocmd BufNewFile,BufRead *.phpt set ft=php
 highlight ColorColumn ctermbg=DarkGray
 
 " Load directory tree to a new tab on launch; in a very Q&D way ;-)
-autocmd VimEnter * :tabe /tmp/tree
-autocmd VimEnter * :%!find .
-autocmd VimEnter * :tabm
-autocmd VimEnter * :tabfirst
+"autocmd VimEnter * :tabe /tmp/tree
+"autocmd VimEnter * :%!find .
+"autocmd VimEnter * :tabm
+"autocmd VimEnter * :tabfirst
 
 " SETTINGS
 set mouse=a
