@@ -8,7 +8,7 @@ au FileChangedShell * echo "Warning: File changed on disk"
 
 " highlighting extra multiple occurences of space char
 highlight ExtraWhitespace ctermbg=gray guibg=gray
-au BufReadPost * match ExtraWhitespace /^\s* \s\s*\|\s\+$/
+" au BufReadPost * match ExtraWhitespace /^\s* \s\s*\|\s\+$/
 " highlight phpt files the way php ones are
 autocmd BufNewFile,BufRead *.phpt set ft=php
 
@@ -68,6 +68,10 @@ map <F12> :!python -m py_compile %; rm %c<CR>
 nnoremap <F8> :set invpaste paste?<CR>
 set pastetoggle=<F8>
 set showmode
+
+" toggle space char highlighting
+:nnoremap <F3> :match ExtraWhitespace /^\t*\zs \+/<CR>
+:nnoremap <F4> :match<CR>
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee %<CR>
