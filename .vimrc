@@ -29,6 +29,10 @@ set history=1000
 set colorcolumn=80
 "set smartindent
 
+" another ruler, 120 cols this time
+"highlight OverLength ctermbg=red ctermfg=white
+"match OverLength /\%<121v.\%>120v/
+
 set nu " display line numbering
 " tabs and indentation
 set noexpandtab " tab mode
