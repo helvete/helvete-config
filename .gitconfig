@@ -26,6 +26,7 @@
 [alias]
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	gr = grep -iI --line-number
 	ci = commit -a
 	co = checkout
