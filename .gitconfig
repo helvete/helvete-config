@@ -1,4 +1,3 @@
-[user]
 [color]
 	branch = auto
 	diff = auto
@@ -19,10 +18,13 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+
 [core]
 	editor = vim
+
 [merge]
 	tool = vimdiff
+
 [alias]
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
@@ -46,3 +48,6 @@
 	unt = rm --cached
 	ph = !git push origin $1 && echo `tput setf 4`"DELETE MERGED BRANCHES YOU DIRTY BASTARD!:"`tput sgr0`
 	po = !git pull origin $1
+
+[include]
+	path = ~/.gitconfig.d # set user name and email here
