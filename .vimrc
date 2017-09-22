@@ -8,18 +8,12 @@ au FileChangedShell * echo "Warning: File changed on disk"
 
 " highlighting extra multiple occurences of space char
 highlight ExtraWhitespace ctermbg=gray guibg=gray
-" au BufReadPost * match ExtraWhitespace /^\s* \s\s*\|\s\+$/
+"au BufReadPost * match ExtraWhitespace /^\s* \s\s*\|\s\+$/
 " highlight phpt files the way php ones are
 autocmd BufNewFile,BufRead *.phpt set ft=php
 
 " 80 chars ruler colour
 highlight ColorColumn ctermbg=DarkGray
-
-" Load directory tree to a new tab on launch; in a very Q&D way ;-)
-"autocmd VimEnter * :tabe /tmp/tree
-"autocmd VimEnter * :%!find .
-"autocmd VimEnter * :tabm
-"autocmd VimEnter * :tabfirst
 
 " SETTINGS
 set mouse=a
@@ -28,10 +22,6 @@ set fileencoding=utf8 " character encoding for the files
 set history=1000
 set colorcolumn=80
 "set smartindent
-
-" another ruler, 120 cols this time
-"highlight OverLength ctermbg=red ctermfg=white
-"match OverLength /\%<121v.\%>120v/
 
 set nu " display line numbering
 " tabs and indentation
@@ -79,8 +69,6 @@ set showmode
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee %<CR>
-
-:colorscheme default
 
 " Pathogen
 execute pathogen#infect()
