@@ -46,7 +46,7 @@
 	dc = diff --cached
 	lfc = diff-tree --no-commit-id --name-only -r
 	unt = rm --cached
-	ph = !git push origin $1 && echo `tput setf 4`"DELETE MERGED BRANCHES YOU DIRTY BASTARD!:"`tput sgr0`
+	ph = !git push origin $1
 	po = !git pull origin $1
 
 [include]
