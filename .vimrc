@@ -63,6 +63,9 @@ nnoremap <F8> :set invpaste paste?<CR>
 set pastetoggle=<F8>
 set showmode
 
+" use darker text colours
+set bg=light
+
 " toggle space char highlighting
 :nnoremap <F3> :match ExtraWhitespace /^\t*\zs \+/<CR>
 :nnoremap <F4> :match<CR>
