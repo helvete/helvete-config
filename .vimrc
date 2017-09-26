@@ -34,12 +34,9 @@ set tabstop=4
 "set expandtab " space mode
 
 " COMMANDS
-" PHP dump sequence
-:command Dump :normal iecho "<pre>"; var_dump(); exit();<ESC>
+"
 " Diffing helper
 :command Dp :.diffput
-" PHP PDO construct (counts on Doctrine I)
-:command Pdo :normal i$pdo = Doctrine_Manager::connection()->getDbh();<CR>$stmt = $pdo->prepare($query);<CR>$stmt->execute($params);<CR>$row = $stmt->fetch(PDO::FETCH_ASSOC)
 " Convert 2 spaces to a tab char
 :command Sp2Tb :%s/  /\t/g
 " Convert file type to unix
@@ -51,6 +48,7 @@ set tabstop=4
 map oo o<ESC>
 " convert multiple spaces into tabs
 map <F10> :%retab!<CR>
+
 " php 5.3 syntax validation
 map <F9> :!/home/user/php53/bin/php -l %<CR>
 " php Main version syntax validation
@@ -58,6 +56,7 @@ map <S-F9> :!php -l %<CR>
 " python syntax validation
 map <S-F12> :!sudo python3 -m py_compile %<CR>
 map <F12> :!python -m py_compile %; rm %c<CR>
+
 " paste mode toggle
 nnoremap <F8> :set invpaste paste?<CR>
 set pastetoggle=<F8>
@@ -65,6 +64,8 @@ set showmode
 
 " use darker text colours
 set bg=light
+" default split position on the right
+set splitright
 
 " toggle space char highlighting
 :nnoremap <F3> :match ExtraWhitespace /^\t*\zs \+/<CR>
