@@ -71,6 +71,10 @@ set splitright
 :nnoremap <F3> :match ExtraWhitespace /^\t*\zs \+/<CR>
 :nnoremap <F4> :match<CR>
 
+" switch off Q command mode for unintentional annoyance. Still waiting to
+" learn utilize it... ;-)
+:nnoremap Q <NOP>
+
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee %<CR>
 
