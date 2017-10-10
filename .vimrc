@@ -74,6 +74,8 @@ set splitright
 " switch off Q command mode for unintentional annoyance. Still waiting to
 " learn utilize it... ;-)
 :nnoremap Q <NOP>
+" annoying F1 missclicks - would do :help for help anyways
+:nnoremap <F1> <NOP>
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee %<CR>
