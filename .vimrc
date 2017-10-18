@@ -52,6 +52,9 @@ map <F10> :%retab!<CR>
 " php main version syntax validation
 map <F9> :!php -l %<CR>
 
+" perl syntax validation
+map <F11> :!perl -c %<CR>
+
 " python syntax validation
 map <S-F12> :!sudo python3 -m py_compile %<CR>
 map <F12> :!python -m py_compile %; rm %c<CR>
