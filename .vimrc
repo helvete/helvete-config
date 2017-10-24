@@ -8,7 +8,6 @@ au FileChangedShell * echo "Warning: File changed on disk"
 
 " highlighting extra multiple occurences of space char
 highlight ExtraWhitespace ctermbg=gray guibg=gray
-"au BufReadPost * match ExtraWhitespace /^\s* \s\s*\|\s\+$/
 " highlight phpt files the way php ones are
 autocmd BufNewFile,BufRead *.phpt set ft=php
 
@@ -74,14 +73,14 @@ set splitright
 :nnoremap <F4> :match<CR>
 
 " switch off Q command mode for unintentional annoyance. Still waiting to
-" learn utilize it... ;-)
+" learn to utilize it... ;-)
 :nnoremap Q <NOP>
 " annoying F1 missclicks - would do :help for help anyways
 :nnoremap <F1> <NOP>
 :inoremap <F1> <NOP>
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
-cmap w!! w !sudo tee %<CR>
+cmap w!!<CR> w !sudo tee %<CR>
 
 " Pathogen
 execute pathogen#infect()
