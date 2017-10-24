@@ -48,7 +48,7 @@ map oo o<ESC>
 " convert multiple spaces into tabs
 map <F10> :%retab!<CR>
 
-" php main version syntax validation
+" php syntax validation
 map <F9> :!php -l %<CR>
 
 " perl syntax validation
