@@ -20,6 +20,7 @@ set encoding=utf8 " character encoding used inside Vim
 set fileencoding=utf8 " character encoding for the files
 set history=1000
 set colorcolumn=80
+set showcmd
 "set smartindent
 
 set nu " display line numbering
