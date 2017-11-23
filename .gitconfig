@@ -44,6 +44,8 @@
 	lfc = diff-tree --no-commit-id --name-only -r
 	ph = push origin
 	po = !git pull origin $1
+	lcm = diff --name-only master...
+	lcd = diff --name-only develop...
 
 [include]
 	path = ~/.gitconfig.d # set user name and email here
