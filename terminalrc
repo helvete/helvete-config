@@ -1,5 +1,5 @@
 [Configuration]
-FontName=DejaVu Sans Mono 9
+FontName=DejaVu Sans Mono 11
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -32,4 +32,5 @@ FontUseSystem=TRUE
 FontAllowBold=FALSE
 ScrollingOnOutput=FALSE
 ColorPalette=rgb(0,0,0);rgb(204,0,0);rgb(78,154,6);rgb(196,160,0);rgb(52,101,164);rgb(117,80,123);rgb(6,152,154);rgb(211,215,207);rgb(85,87,83);rgb(239,41,41);rgb(138,226,52);rgb(196,160,0);rgb(102,134,192);rgb(204,0,0);rgb(6,152,154);rgb(238,238,236)
-
+AccelCopy=<Control><Insert>
+AccelPaste=<Shift><Insert>
