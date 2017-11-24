@@ -68,6 +68,8 @@ set showmode
 set bg=light
 " default split position on the right
 set splitright
+" increase open tabs limit
+set tabpagemax=100
 
 " toggle space char highlighting
 :nnoremap <F3> :match ExtraWhitespace /^\t*\zs \+/<CR>
