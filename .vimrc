@@ -43,6 +43,8 @@ set tabstop=4
 :command! ToUnix set ff=unix
 " Format json
 :command! JSON :%!python -mjson.tool
+" Resource config
+:command! RS :source ~/.vimrc
 
 " MAPPINGS
 map oo o<ESC>
