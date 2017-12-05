@@ -12,7 +12,7 @@ highlight ExtraWhitespace ctermbg=gray guibg=gray
 autocmd BufNewFile,BufRead *.phpt set ft=php
 
 " 80 chars ruler colour
-highlight ColorColumn ctermbg=DarkGray
+highlight ColorColumn ctermbg=Brown
 
 " SETTINGS
 set mouse=a
