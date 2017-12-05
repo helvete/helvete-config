@@ -36,13 +36,13 @@ set tabstop=4
 " COMMANDS
 "
 " Diffing helper
-:command Dp :.diffput
+:command! Dp :.diffput
 " Convert 2 spaces to a tab char
-:command Sp2Tb :%s/  /\t/g
+:command! Sp2Tb :%s/  /\t/g
 " Convert file type to unix
-:command ToUnix set ff=unix
+:command! ToUnix set ff=unix
 " Format json
-:command JSON :%!python -mjson.tool
+:command! JSON :%!python -mjson.tool
 
 " MAPPINGS
 map oo o<ESC>
