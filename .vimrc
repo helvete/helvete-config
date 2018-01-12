@@ -84,8 +84,8 @@ set tabpagemax=100
 :nnoremap <F1> <NOP>
 :inoremap <F1> <NOP>
 
-" Allow saving of files as sudo when I forgot to start vim using sudo.
-cmap w!!<CR> w !sudo tee %<CR>
+" Save file using sudo
+cmap WW w !sudo tee %<CR>
 
 " Pathogen
 execute pathogen#infect()
