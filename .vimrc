@@ -85,7 +85,7 @@ set tabpagemax=100
 :inoremap <F1> <NOP>
 
 " Save file using sudo
-cmap WW w !sudo tee %<CR>
+cmap WW w !sudo tee > /dev/null %<CR>
 
 " Pathogen
 execute pathogen#infect()
