@@ -25,13 +25,13 @@ set showcmd
 
 set nu " display line numbering
 " tabs and indentation
-set noexpandtab " tab mode
+"set noexpandtab " tab mode
 set copyindent
 set preserveindent
 set softtabstop=0
 set shiftwidth=4
 set tabstop=4
-"set expandtab " space mode
+set expandtab " space mode
 
 " COMMANDS
 "
@@ -48,8 +48,16 @@ set tabstop=4
 
 " MAPPINGS
 map oo o<ESC>
+
 " convert multiple spaces into tabs
 map <F10> :%retab!<CR>
+
+" multimode wrap toggle
+nnoremap <F5> :set wrap! wrap?<CR>
+imap <F5> <C-O><F5>
+
+" toggle showing new line chars
+nnoremap <F7> :set list! list? <CR>
 
 " php syntax validation
 map <F9> :!php -l %<CR>
@@ -80,6 +88,7 @@ set tabpagemax=100
 " switch off Q command mode for unintentional annoyance. Still waiting to
 " learn to utilize it... ;-)
 :nnoremap Q <NOP>
+
 " annoying F1 missclicks - would do :help for help anyways
 :nnoremap <F1> <NOP>
 :inoremap <F1> <NOP>
