@@ -12,6 +12,9 @@ highlight ExtraWhitespace ctermbg=gray guibg=gray
 autocmd BufNewFile,BufRead *.phpt set ft=php
 let php_minlines=666
 
+" highlight .vimrc.d files the way .vimrc ones are
+autocmd BufNewFile,BufRead .vimrc.d set ft=vim
+
 " 80 chars ruler colour
 highlight ColorColumn ctermbg=Brown
 
@@ -121,5 +124,9 @@ nmap <F2> :TagbarToggle<CR>
 	let g:tagbar_compact = 1
 	let g:tagbar_width = 30
 	let g:tagbar_zoomwidth = 0
-	let g:tagbar_iconchars = ['▷', '◢']
+	let g:tagbar_iconchars = ['|', '+']
 	" }
+
+if filereadable("~/.vimrc.d")
+  source ~/.vimrc.d
+endif
