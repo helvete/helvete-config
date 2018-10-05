@@ -10,6 +10,7 @@ au FileChangedShell * echo "Warning: File changed on disk"
 highlight ExtraWhitespace ctermbg=gray guibg=gray
 " highlight phpt files the way php ones are
 autocmd BufNewFile,BufRead *.phpt set ft=php
+let php_minlines=666
 
 " 80 chars ruler colour
 highlight ColorColumn ctermbg=Brown
