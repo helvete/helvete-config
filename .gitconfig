@@ -46,6 +46,7 @@
 	po = !git pull origin $1
 	dn = diff --name-only
 	k = !gitk $@ &
+	d = !sh -c 'echo ===============MODIFIED:\ngit diff && echo ===============STAGED:\n git dc'
 
 [include]
 	path = ~/.gitconfig.d # set user name and email here
