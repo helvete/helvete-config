@@ -45,6 +45,7 @@
 	ph = push origin
 	po = !git pull origin $1
 	dn = diff --name-only
+	k = !gitk $@ &
 
 [include]
 	path = ~/.gitconfig.d # set user name and email here
