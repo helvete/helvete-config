@@ -42,8 +42,8 @@
 	tlbr = remote prune origin --dry-run
 	la = !git config -l | grep alias | cut -c 7-
 	lfc = diff-tree --no-commit-id --name-only -r
-	ph = push origin
-	po = !git pull origin $1
+	ph = !: git branch && git push origin
+	po = !: git branch && git pull origin
 	dn = diff --name-only
 	k = !gitk $@ &
 	d = !sh -c 'echo ===============MODIFIED:\ngit diff && echo ===============STAGED:\n git dc'
