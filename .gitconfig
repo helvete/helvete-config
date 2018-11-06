@@ -47,6 +47,10 @@
 	dn = diff --name-only
 	k = !gitk $@ &
 	d = !sh -c 'echo ===============MODIFIED:\ngit diff && echo ===============STAGED:\n git dc'
+	mt = mergetool --prompt
+
+	# testing:
+	gitkconflict = !gitk --left-right HEAD...MERGE_HEAD
 
 [include]
 	path = ~/.gitconfig.d # set user name and email here
