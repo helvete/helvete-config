@@ -78,6 +78,10 @@ nnoremap <F8> :set invpaste paste?<CR>
 set pastetoggle=<F8>
 set showmode
 
+" switch to/from vimdiff mode on open windows
+nnoremap <F6> :windo diffthis<CR>
+nnoremap <S-F6> :diffoff!<CR>
+
 " use darker text colours
 set bg=light
 " default split position on the right
