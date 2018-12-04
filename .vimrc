@@ -47,6 +47,8 @@ set expandtab " space mode
 :command! ToUnix set ff=unix
 " Format json
 :command! JSON :%!python -mjson.tool
+" Prepare XML for the default formatter (`gg=G`)
+:command! XML :%s/></>\r</g
 " Resource config
 :command! RS :source ~/.vimrc
 
