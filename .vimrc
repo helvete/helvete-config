@@ -12,6 +12,9 @@ highlight ExtraWhitespace ctermbg=gray guibg=gray
 autocmd BufNewFile,BufRead *.phpt set ft=php
 let php_minlines=666
 
+" highlight lock files like json files
+autocmd BufNewFile,BufRead *.lock set ft=javascript
+
 " highlight .vimrc.d files the way .vimrc ones are
 autocmd BufNewFile,BufRead .vimrc.d set ft=vim
 
