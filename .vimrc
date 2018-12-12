@@ -18,6 +18,9 @@ autocmd BufNewFile,BufRead *.lock set ft=javascript
 " highlight .vimrc.d files the way .vimrc ones are
 autocmd BufNewFile,BufRead .vimrc.d set ft=vim
 
+" highlight Dockerfiles
+autocmd BufNewFile,BufRead Dockerfile* set ft=dockerfile
+
 " 80 chars ruler colour
 highlight ColorColumn ctermbg=Brown
 
