@@ -21,6 +21,9 @@ autocmd BufNewFile,BufRead .vimrc.d set ft=vim
 " highlight Dockerfiles
 autocmd BufNewFile,BufRead Dockerfile* set ft=dockerfile
 
+" highlight Dockerfiles
+autocmd BufNewFile,BufRead .env* set ft=sh
+
 " 80 chars ruler colour
 highlight ColorColumn ctermbg=Brown
 
