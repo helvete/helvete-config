@@ -94,6 +94,8 @@ nnoremap <S-F6> :diffoff!<CR>
 set bg=light
 " default split position on the right
 set splitright
+" default split position on the right
+set splitbelow
 " increase open tabs limit
 set tabpagemax=100
 
