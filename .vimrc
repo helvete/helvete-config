@@ -24,6 +24,9 @@ autocmd BufNewFile,BufRead Dockerfile* set ft=dockerfile
 " highlight Dockerfiles
 autocmd BufNewFile,BufRead .env* set ft=sh
 
+" highlight neon
+autocmd BufNewFile,BufRead *.neon* set ft=yaml
+
 " 80 chars ruler colour
 highlight ColorColumn ctermbg=Brown
 
