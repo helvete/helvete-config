@@ -54,6 +54,7 @@ set expandtab " space mode
 " Diffing helpers
 :command! Dp :diffput
 :command! Dg :diffget
+:command! Du :diffupdate
 " Convert 2 spaces to a tab char
 :command! Sp2Tb :%s/  /\t/g
 " Convert file type to unix
