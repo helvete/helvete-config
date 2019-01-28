@@ -21,6 +21,7 @@
 
 [core]
 	editor = vim
+	pager = cat
 
 [merge]
 	tool = vimdiff
@@ -47,6 +48,7 @@
 	dn = diff --name-only
 	k = !gitk $@ &
 	mt = mergetool --prompt
+	tgl = tag --sort=v:refname -n
 
 	# testing:
 	gitkconflict = !gitk --left-right HEAD...MERGE_HEAD
