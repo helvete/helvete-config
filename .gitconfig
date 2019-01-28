@@ -46,7 +46,6 @@
 	po = !: git branch && git pull origin
 	dn = diff --name-only
 	k = !gitk $@ &
-	d = !sh -c 'echo ===============MODIFIED:\ngit diff && echo ===============STAGED:\n git dc'
 	mt = mergetool --prompt
 
 	# testing:
