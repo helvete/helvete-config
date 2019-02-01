@@ -6,7 +6,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " warn on file change while editting
 au FileChangedShell * echo "Warning: File changed on disk"
 
-" highlighting extra multiple occurences of space char
+" highlighting extra multiple occurences of a space char
 highlight ExtraWhitespace ctermbg=gray guibg=gray
 " highlight phpt files the way php ones are
 autocmd BufNewFile,BufRead *.phpt set ft=php
@@ -21,7 +21,7 @@ autocmd BufNewFile,BufRead .vimrc.d set ft=vim
 " highlight Dockerfiles
 autocmd BufNewFile,BufRead Dockerfile* set ft=dockerfile
 
-" highlight Dockerfiles
+" highlight .env files
 autocmd BufNewFile,BufRead .env* set ft=sh
 
 " highlight neon
@@ -73,7 +73,7 @@ set expandtab " space mode
 " MAPPINGS
 map oo o<ESC>
 
-" convert multiple spaces into tabs
+" convert multiple spaces into tabs (and vice versa in space mode)
 map <F10> :%retab!<CR>
 
 " multimode wrap toggle
@@ -98,20 +98,20 @@ nnoremap <F8> :set invpaste paste?<CR>
 set pastetoggle=<F8>
 set showmode
 
-" switch to/from vimdiff mode on open windows
+" switch to/from vimdiff mode on current windows
 nnoremap <F6> :windo diffthis<CR>
 nnoremap <S-F6> :diffoff!<CR>
 
-" use darker text colours
+" use specific text colours
 set bg=light
 " default split position on the right
 set splitright
-" default split position on the right
+" default split position on the bottom
 set splitbelow
 " increase open tabs limit
 set tabpagemax=100
 
-" toggle space char highlighting
+" toggle space char highlighting, TODO: toggle mode to save one F-x key
 :nnoremap <F3> :match ExtraWhitespace /^\t*\zs \+/<CR>
 :nnoremap <F4> :match<CR>
 
