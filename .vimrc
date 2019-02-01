@@ -65,6 +65,10 @@ set expandtab " space mode
 :command! XML :%s/></>\r</g
 " Resource config
 :command! RS :source ~/.vimrc
+" Switch ff display
+:command! -nargs=1 FF e ++ff=<args>
+" Switch ff display to unix - shortcut cmd
+:command! Fu e ++ff=unix
 
 " MAPPINGS
 map oo o<ESC>
