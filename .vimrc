@@ -153,6 +153,6 @@ nmap <F2> :TagbarToggle<CR>
 	let g:tagbar_iconchars = ['|', '+']
 	" }
 
-if filereadable("~/.vimrc.d")
+if filereadable(expand("~/.vimrc.d"))
   source ~/.vimrc.d
 endif
