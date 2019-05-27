@@ -43,8 +43,8 @@
 	tlbr = remote prune origin --dry-run
 	la = !git config -l | grep alias | cut -c 7-
 	lfc = diff-tree --no-commit-id --name-only -r
-	ph = !: git branch && git push origin
-	po = !: git branch && git pull origin
+	ph = !: git branch && git push --follow-tags origin
+	po = !: git branch && git pull --tags origin
 	dn = diff --name-only
 	k = !gitk $@ &
 	mt = mergetool --prompt
