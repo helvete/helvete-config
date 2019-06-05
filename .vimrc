@@ -126,6 +126,10 @@ set tabpagemax=100
 " Save file using sudo
 cmap WW w !sudo tee > /dev/null %<CR>
 
+if has('arabic')
+    set noarabicshape
+endif
+
 " Pathogen
 execute pathogen#infect()
 call pathogen#helptags() " generate helptags for everything in 'runtimepath'
