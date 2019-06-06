@@ -111,6 +111,8 @@ set splitbelow
 " increase open tabs limit
 set tabpagemax=100
 
+set mmp=1048576
+
 " toggle space char highlighting, TODO: toggle mode to save one F-x key
 :nnoremap <F3> :match ExtraWhitespace /^\t*\zs \+/<CR>
 :nnoremap <F4> :match<CR>
