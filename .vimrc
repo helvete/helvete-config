@@ -27,6 +27,9 @@ autocmd BufNewFile,BufRead .env* set ft=sh
 " highlight neon
 autocmd BufNewFile,BufRead *.neon* set ft=yaml
 
+" test general conf SH
+autocmd BufNewFile,BufRead *.conf set ft=sh
+
 " 80 chars ruler colour
 highlight ColorColumn ctermbg=Brown
 
