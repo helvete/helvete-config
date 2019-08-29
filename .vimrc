@@ -77,7 +77,7 @@ set expandtab " space mode
 map oo o<ESC>
 
 " convert multiple spaces into tabs (and vice versa in space mode)
-map <F10> :%retab!<CR>
+map <F1> :%retab!<CR>
 
 " multimode wrap toggle
 nnoremap <F5> :set wrap! wrap?<CR>
@@ -88,6 +88,8 @@ nnoremap <F7> :set list! list? <CR>
 
 " php syntax validation
 map <F9> :!php -l %<CR>
+
+map <F10> :!java-syntax % <CR>
 
 " perl syntax validation
 map <S-F11> :!perl -c %<CR>
