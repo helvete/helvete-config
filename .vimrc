@@ -52,6 +52,23 @@ set shiftwidth=4
 set tabstop=4
 set expandtab " space mode
 
+" use specific text colours to work OK w/ terminal colour-scheme
+set bg=light
+" default split position on the right
+set splitright
+" default split position on the bottom
+set splitbelow
+" increase open tabs limit
+set tabpagemax=100
+
+set mmp=1048576
+
+" prevent computationally intensive processing of arabic chars vim tries to do
+" on pastes of binary data
+if has('arabic')
+    set noarabicshape
+endif
+
 " COMMANDS
 "
 " Diffing helpers
@@ -74,76 +91,61 @@ set expandtab " space mode
 :command! Fu e ++ff=unix
 
 " MAPPINGS
-map oo o<ESC>
-
+"
 " convert multiple spaces into tabs (and vice versa in space mode)
 map <F1> :%retab!<CR>
+
+nmap <F2> :TagbarToggle<CR>
+
+" toggle space char highlighting
+nnoremap <F3> :match ExtraWhitespace /^\t*\zs \+/<CR>
+nnoremap <F4> :match<CR>
 
 " multimode wrap toggle
 nnoremap <F5> :set wrap! wrap?<CR>
 imap <F5> <C-O><F5>
 
+" switch to/from vimdiff mode on current windows
+nnoremap <F6> :windo diffthis<CR>
+nnoremap <S-F6> :diffoff!<CR>
+
 " toggle showing new line chars
 nnoremap <F7> :set list! list? <CR>
-
-" php syntax validation
-map <F9> :!php -l %<CR>
-
-map <F10> :!java-syntax % <CR>
-
-" perl syntax validation
-map <S-F11> :!perl -c %<CR>
-
-" python syntax validation
-map <S-F12> :!sudo python3 -m py_compile %<CR>
-map <F12> :!python -m py_compile %; rm %c<CR>
 
 " paste mode toggle
 nnoremap <F8> :set invpaste paste?<CR>
 set pastetoggle=<F8>
 set showmode
 
-" switch to/from vimdiff mode on current windows
-nnoremap <F6> :windo diffthis<CR>
-nnoremap <S-F6> :diffoff!<CR>
+" php syntax validation
+map <F9> :!php -l %<CR>
 
-" use specific text colours
-set bg=light
-" default split position on the right
-set splitright
-" default split position on the bottom
-set splitbelow
-" increase open tabs limit
-set tabpagemax=100
+" java syntax validation
+map <F10> :!java-syntax % <CR>
 
-set mmp=1048576
+" perl syntax validation
+map <S-F11> :!perl -c %<CR>
 
-" toggle space char highlighting, TODO: toggle mode to save one F-x key
-:nnoremap <F3> :match ExtraWhitespace /^\t*\zs \+/<CR>
-:nnoremap <F4> :match<CR>
+" python syntax validation
+map <F12> :!python -m py_compile %; rm %c<CR>
+map <S-F12> :!sudo python3 -m py_compile %<CR>
 
-" switch off Q command mode for unintentional annoyance. Still waiting to
-" learn to utilize it... ;-)
-:nnoremap Q <NOP>
+" switch off Q command mode for unintentional annoyance
+nnoremap Q <NOP>
 
-" annoying F1 missclicks - would do :help for help anyways
-:nnoremap <F1> <NOP>
-:inoremap <F1> <NOP>
+map oo o<ESC>
 
 " Save file using sudo
 cmap WW w !sudo tee > /dev/null %<CR>
 
-if has('arabic')
-    set noarabicshape
-endif
-
+" PLUGINS
+"
 " Pathogen
 execute pathogen#infect()
 call pathogen#helptags() " generate helptags for everything in 'runtimepath'
 syntax on
 filetype plugin indent on
 
-nmap <F2> :TagbarToggle<CR>
 " TagBar {
 	let g:tagbar_autofocus = 1
 	let g:tagbar_autoclose = 1
@@ -164,6 +166,7 @@ nmap <F2> :TagbarToggle<CR>
 	let g:tagbar_iconchars = ['|', '+']
 	" }
 
+" enable non-VC override
 if filereadable(expand("~/.vimrc.d"))
   source ~/.vimrc.d
 endif
