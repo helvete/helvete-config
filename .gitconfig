@@ -49,6 +49,8 @@
 	mt = mergetool --prompt
 	tgl = tag --sort=v:refname -n
 	ada = !git add -u . && git commit
+	phforce = !: git branch && git push --follow-tags --force origin
+	dh = diff --name-only HEAD~..HEAD
 
 	# testing:
 	gitkconflict = !gitk --left-right HEAD...MERGE_HEAD
