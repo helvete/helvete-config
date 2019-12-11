@@ -53,8 +53,5 @@
 	dh = diff --name-only HEAD~..HEAD
 	uncih = !git reset --soft HEAD^ && git reset HEAD . && git co -- .
 
-	# testing:
-	gitkconflict = !gitk --left-right HEAD...MERGE_HEAD
-
 [include]
 	path = ~/.gitconfig.d # set user name and email here
