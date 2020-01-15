@@ -94,6 +94,7 @@ endif
 "
 " convert multiple spaces into tabs (and vice versa in space mode)
 map <F1> :%retab!<CR>
+imap <F1> <NOP>
 
 nmap <F2> :TagbarToggle<CR>
 
