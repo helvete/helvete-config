@@ -95,6 +95,9 @@ endif
 " Search for snakecase and replace to camelcase
 :command! Camel :%s/_\([a-z]\{1\}\)/\U\1\E/gc
 
+" Getter macro i^R^R<registerName>
+let @g = 'yypcepublicwwigetlgU1lA() {returnjkkk$ybjjp^6li A;}j'
+
 " MAPPINGS
 "
 " convert multiple spaces into tabs (and vice versa in space mode)
