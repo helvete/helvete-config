@@ -92,6 +92,8 @@ endif
 :command! -nargs=1 FF e ++ff=<args>
 " Switch ff display to unix - shortcut cmd
 :command! Fu e ++ff=unix
+" Search for snakecase and replace to camelcase
+:command! Camel :%s/_\([a-z]\{1\}\)/\U\1\E/gc
 
 " MAPPINGS
 "
