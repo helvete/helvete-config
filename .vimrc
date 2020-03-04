@@ -5,6 +5,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 " warn on file change while editting
 au FileChangedShell * echo "Warning: File changed on disk"
+" yaml edit mode
+au FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " highlighting extra multiple occurences of a space char
 highlight ExtraWhitespace ctermbg=gray guibg=gray
