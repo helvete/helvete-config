@@ -52,7 +52,7 @@ set nu " display line numbering
 "set noexpandtab " tab mode
 set copyindent
 set preserveindent
-set softtabstop=0
+set softtabstop=4
 set shiftwidth=4
 set tabstop=4
 set expandtab " space mode
