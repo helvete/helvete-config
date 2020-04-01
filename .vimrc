@@ -146,6 +146,10 @@ nnoremap Q <NOP>
 
 map oo o<ESC>
 
+" camelCase search bothwards
+nnoremap F /\u<CR>
+nnoremap T ?\u<CR>
+
 " Save file using sudo
 cmap WW w !sudo tee > /dev/null %<CR>
 
