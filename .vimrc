@@ -147,8 +147,8 @@ nnoremap Q <NOP>
 map oo o<ESC>
 
 " camelCase search bothwards
-nnoremap F /\u<CR>
-nnoremap T ?\u<CR>
+nnoremap <C-Right> /\u<CR>
+nnoremap <C-Left> ?\u<CR>
 
 " Save file using sudo
 cmap WW w !sudo tee > /dev/null %<CR>
