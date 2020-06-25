@@ -16,6 +16,9 @@ let php_minlines=666
 
 " highlight lock files like json files
 autocmd BufNewFile,BufRead *.lock set ft=javascript
+"
+" highlight typescript files like javascript onesl
+autocmd BufNewFile,BufRead *.ts set ft=javascript
 
 " highlight .vimrc.d files the way .vimrc ones are
 autocmd BufNewFile,BufRead .vimrc.d set ft=vim
