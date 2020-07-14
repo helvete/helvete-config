@@ -1,7 +1,7 @@
 #Add this to the end of the generated ~/.bashrc
 #
 #if [ -f ~/.bashrc_vcs ]; then
-#    . ~/.bashrc_vcs
+#	 . ~/.bashrc_vcs
 #fi
 
 PROMPT_COMMAND='history -a'
@@ -22,14 +22,18 @@ HISTFILESIZE=32768
 #shopt -s checkwinsize
 
 if [ "$color_prompt" = yes ]; then
-    parse_git_branch() {
-	    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \[\1\]/'
-    }
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;35m\]$(parse_git_branch)\[\033[01;34m\] \$ \[\033[00m\]'
+	parse_git_branch() {
+		git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \[\1\]/'
+	}
+	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;35m\]$(parse_git_branch)\[\033[01;34m\] \$ \[\033[00m\]'
 else
 	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
+
+if ! echo "$PATH" | grep "$HOME" &>/dev/null; then
+	PATH=$HOME/bin:$PATH;
+fi
 
 genpasswd() {
 	local l=$1
