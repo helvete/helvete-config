@@ -1,1 +1,10 @@
+\set COMP_KEYWORD_CASE upper
+\set HISTFILE ~/.psql/history- :HOST - :DBNAME
+\set HISTCONTROL ignoredups
+\set VERBOSITY verbose
+\set PROMPT1 '%n@%/%R%# '
+\set PROMPT2 '[continue]%R> '
 \pset pager off
+\pset null '(null)'
+
+\timing
