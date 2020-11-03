@@ -156,6 +156,10 @@ nnoremap <C-Left> ?\u<CR>
 " Save file using sudo
 cmap WW w !sudo tee > /dev/null %<CR>
 
+" Hex edit commands
+:cmap HH :%!xxd<CR> :set filetype=xxd<CR>
+:cmap GG :%!xxd -r<CR> :set binary<CR> :set filetype=<CR>
+
 " PLUGINS
 "
 " Pathogen
