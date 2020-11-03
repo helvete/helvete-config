@@ -35,6 +35,9 @@ if ! echo "$PATH" | grep "$HOME" &>/dev/null; then
 	PATH=$HOME/bin:$PATH;
 fi
 
+# 4-space tabs
+tabs -4
+
 genpasswd() {
 	local l=$1
 		[ "$l" == "" ] && l=16
