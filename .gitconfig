@@ -47,7 +47,7 @@
 	dn = diff --name-only
 	k = !gitk $@ &
 	mt = mergetool --prompt
-	tgl = tag --sort=v:refname -n
+	tgl = !git tag --sort=v:refname -n |tail
 	ada = !git add -u . && git commit
 	adrm = !git ls-files --deleted | xargs git add
 	phforce = !: git branch && git push --follow-tags --force origin
