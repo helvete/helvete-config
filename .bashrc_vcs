@@ -43,12 +43,6 @@ genpasswd() {
 		[ "$l" == "" ] && l=16
 		tr -dc A-Za-z0-9_- < /dev/urandom | head -c ${l} | xargs
 }
-gti() {
-	git "$@"
-}
-vimp() {
-	vim -p "$@"
-}
 cdr() {
 	cd ~/repositories/
 }
