@@ -101,6 +101,8 @@ endif
 :command! Fu e ++ff=unix
 " Search for snakecase and replace to camelcase
 :command! Camel :%s/_\([a-z]\{1\}\)/\U\1\E/gc
+" Run current buffer through bc
+:command! Bc :!cat % |bc
 
 " Getter + Setter from Getter macro i^R^R<registerName> (<80>kr ~= l)
 let @g = 'yypcepublicwwigetlgU1lA() {returnjkkk$ybjjp^6li A;}j'
