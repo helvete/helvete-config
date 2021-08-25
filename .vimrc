@@ -34,9 +34,12 @@ autocmd BufNewFile,BufRead *.neon* set ft=yaml
 
 " general conf SH
 autocmd BufNewFile,BufRead *.conf set ft=sh
-"
+
 " api requester conf file
 autocmd BufNewFile,BufRead *.api_request set ft=conf
+
+" SQS files
+autocmd BufNewFile,BufRead *.sqs set ft=sql
 
 " 80 chars ruler colour
 highlight ColorColumn ctermbg=Brown
