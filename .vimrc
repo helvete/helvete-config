@@ -110,6 +110,8 @@ endif
 " Getter + Setter from Getter macro i^R^R<registerName> (<80>kr ~= l)
 let @g = 'yypcepublicwwigetlgU1lA() {returnjkkk$ybjjp^6li A;}j'
 let @h = 'wyt wwpbbbbcevoidwrsftlyt(wwwi pbgulji = pbgul^cf this.jj^'
+" Slack macro - convert text to alphabet emoji
+let @a = 'i:alphabet-yellow-la:l'
 
 " MAPPINGS
 "
