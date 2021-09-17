@@ -47,4 +47,6 @@ cdr() {
 	cd ~/repositories/
 }
 
+alias psdocker='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}\t{{.Names}}"'
+
 GLOBIGNORE=.:..
