@@ -53,7 +53,7 @@ set colorcolumn=80
 set showcmd
 "set smartindent
 
-set nu " display line numbering
+set nonu " no longer display line numbering
 " tabs and indentation
 "set noexpandtab " tab mode
 set copyindent
