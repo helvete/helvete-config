@@ -47,6 +47,10 @@ cdr() {
 	cd ~/repositories/
 }
 
+vimf() {
+    vim $(find . -name "*$1*")
+}
+
 alias psdocker='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}\t{{.Names}}"'
 
 GLOBIGNORE=.:..
