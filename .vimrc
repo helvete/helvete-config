@@ -91,9 +91,7 @@ endif
 " Convert file type to unix
 :command! ToUnix set ff=unix
 " Format json
-:command! JSON :%!python -mjson.tool
-" Until mainstram python is 3.9 so --no-ensure-ascii can be used, this comes handy
-:command! PJSON :%!php -r "echo json_encode(json_decode(stream_get_contents(STDIN)), JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE);"
+:command! JSON :%!python -mjson.tool --no-ensure-ascii
 " Prepare XML for the default formatter (`gg=G`)
 :command! XML :%s/></>\r</g
 " Resource config
