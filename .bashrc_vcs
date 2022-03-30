@@ -46,6 +46,9 @@ genpasswd() {
 cdr() {
 	cd ~/repositories/
 }
+cdd() {
+	cd ~/database/
+}
 
 vimf() {
     vim $(find . -name "*$1*")
