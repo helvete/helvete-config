@@ -104,6 +104,8 @@ endif
 :command! Camel :%s/_\([a-z]\{1\}\)/\U\1\E/gc
 " Run current buffer through bc
 :command! Bc :!cat % |bc
+" Java debug
+:command! JavaDebug :normal i<CR> if (true) throw new RuntimeException(new com.google.gson.Gson().toJson());<CR>
 
 " Getter + Setter from Getter macro i^R^R<registerName> (<80>kr ~= l)
 let @g = 'yypcepublicwwigetlgU1lA() {returnjkkk$ybjjp^6li A;}j'
