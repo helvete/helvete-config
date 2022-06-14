@@ -51,6 +51,7 @@
 	ph = !: git branch && git push --follow-tags origin
 	phs = !: git branch && git push --follow-tags origin $(git rev-parse --abbrev-ref HEAD)
 	po = !: git branch && git pull --tags origin
+	pos = !: git branch && git pull --tags origin $(git rev-parse --abbrev-ref HEAD)
 	dn = diff --name-only
 	k = !gitk $@ &
 	mt = mergetool --prompt
