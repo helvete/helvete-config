@@ -63,6 +63,7 @@
 	uncih = !git reset --soft HEAD^ && git reset HEAD . && git co -- .
 	mnf = merge --no-ff
 	cp = cherry-pick -x
+	tgcml = "! git tag -a \"$1\" \"$(git show -s --format=%h)\" -m \"$(git show -s --format=%s)\" #"
 
 [include]
 	path = ~/.gitconfig.d # set user name and email here
