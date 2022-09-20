@@ -67,3 +67,5 @@
 
 [include]
 	path = ~/.gitconfig.d # set user name and email here
+[init]
+	defaultBranch = master
