@@ -74,6 +74,9 @@ set tabpagemax=100
 
 set mmp=1048576
 
+" underscore as a word separator (test mode)
+set iskeyword-=_
+
 " prevent computationally intensive processing of arabic chars vim tries to do
 " on pastes of binary data
 if has('arabic')
