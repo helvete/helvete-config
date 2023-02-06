@@ -154,8 +154,7 @@ map <F10> :!java-syntax % <CR>
 map <S-F11> :!perl -c %<CR>
 
 " python syntax validation
-map <F12> :!python -m py_compile %; rm %c<CR>
-map <S-F12> :!sudo python3 -m py_compile %<CR>
+map <F12> :!sudo python3 -m py_compile %<CR>
 
 " switch off Q command mode for unintentional annoyance
 nnoremap Q <NOP>
