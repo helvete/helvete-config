@@ -7,6 +7,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 au FileChangedShell * echo "Warning: File changed on disk"
 " yaml edit mode
 au FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+au FileType gql setlocal ts=2 sts=2 sw=2 expandtab
 
 " highlighting extra multiple occurences of a space char
 highlight ExtraWhitespace ctermbg=gray guibg=gray
@@ -40,6 +41,9 @@ autocmd BufNewFile,BufRead *.api_request set ft=conf
 
 " SQS files
 autocmd BufNewFile,BufRead *.sqs set ft=sql
+
+" SQS files
+autocmd BufNewFile,BufRead *.gql set ft=python
 
 " 80 chars ruler colour
 highlight ColorColumn ctermbg=Brown
