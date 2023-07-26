@@ -20,7 +20,7 @@
 	untracked = cyan
 
 [core]
-	editor = vim
+	editor = vi
 	pager = cat
 
 [merge]
