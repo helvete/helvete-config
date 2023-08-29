@@ -42,8 +42,11 @@ autocmd BufNewFile,BufRead *.api_request set ft=conf
 " SQS files
 autocmd BufNewFile,BufRead *.sqs set ft=sql
 
-" SQS files
+" typescript files
 autocmd BufNewFile,BufRead *.gql set ft=python
+
+" terraform files
+autocmd BufNewFile,BufRead *.tf set ft=python
 
 " 80 chars ruler colour
 highlight ColorColumn ctermbg=Brown
