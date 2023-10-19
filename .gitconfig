@@ -1,78 +1,78 @@
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+    branch = auto
+    diff = auto
+    status = auto
 
 [color "branch"]
-	current = red reverse
-	local = blue
-	remote = green
+    current = red reverse
+    local = blue
+    remote = green
 
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 
 [core]
-	editor = vi
-	pager = cat
+    editor = vi
+    pager = cat
 
 [merge]
-	tool = vimdiff
+    tool = vimdiff
 
 [pull]
-	rebase = false
+    rebase = false
 
 [checkout]
     defaultRemote = origin
 
 [alias]
-	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	co = checkout
-	st = status
-	br = branch
-	lb = branch -a
-	brco = checkout -b
-	dc = diff --cached
-	unci = reset --soft HEAD^
-	rf = reflog --date=local
-	dlbr = remote prune origin
-	tlbr = remote prune origin --dry-run
-	la = !git config -l | grep alias | cut -c 7-
-	lfc = diff-tree --no-commit-id --name-only -r
-	ph = !: git branch && git push --follow-tags origin
-	phs = !: git branch && git push --follow-tags origin $(git rev-parse --abbrev-ref HEAD)
-	po = !: git branch && git pull --tags origin
-	pos = !: git branch && git pull --tags origin $(git rev-parse --abbrev-ref HEAD)
-	dn = diff --name-only
-	k = !gitk $@ &
-	mt = mergetool --prompt
-	tgl = !git tag --sort=v:refname -n |tail -n 32
-	ada = !git add -u . && git commit
-	adrm = !git ls-files --deleted | xargs git add
-	phforce = !: git branch && git push --follow-tags --force origin
-	dh = diff --name-only HEAD~..HEAD
-	uncih = !git reset --soft HEAD^ && git reset HEAD . && git co -- .
-	mnf = merge --no-ff
-	cp = cherry-pick -x
-	tgcml = "! git tag -a \"$1\" \"$(git show -s --format=%h)\" -m \"$(git show -s --format=%s)\" #"
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    co = checkout
+    st = status
+    br = branch
+    lb = branch -a
+    brco = checkout -b
+    dc = diff --cached
+    unci = reset --soft HEAD^
+    rf = reflog --date=local
+    dlbr = remote prune origin
+    tlbr = remote prune origin --dry-run
+    la = !git config -l | grep alias | cut -c 7-
+    lfc = diff-tree --no-commit-id --name-only -r
+    ph = !: git branch && git push --follow-tags origin
+    phs = !: git branch && git push --follow-tags origin $(git rev-parse --abbrev-ref HEAD)
+    po = !: git branch && git pull --tags origin
+    pos = !: git branch && git pull --tags origin $(git rev-parse --abbrev-ref HEAD)
+    dn = diff --name-only
+    k = !gitk $@ &
+    mt = mergetool --prompt
+    tgl = !git tag --sort=v:refname -n |tail -n 32
+    ada = !git add -u . && git commit
+    adrm = !git ls-files --deleted | xargs git add
+    phforce = !: git branch && git push --follow-tags --force origin
+    dh = diff --name-only HEAD~..HEAD
+    uncih = !git reset --soft HEAD^ && git reset HEAD . && git co -- .
+    mnf = merge --no-ff
+    cp = cherry-pick -x
+    tgcml = "! git tag -a \"$1\" \"$(git show -s --format=%h)\" -m \"$(git show -s --format=%s)\" #"
 
 [include]
-	path = ~/.gitconfig.d # set user name and email here
+    path = ~/.gitconfig.d # set user name and email here
 
 [init]
-	defaultBranch = master
+    defaultBranch = master
 
 [advice]
-	statusHints = false
+    statusHints = false
     pushUpdateRejected = false
     pushNonFFCurrent = false
     pushNonFFMatching = false
@@ -86,4 +86,4 @@
     implicitIdentity = false
     detachedHead = false
     amWorkDir = false
-    rmHints	 = false
+    rmHints  = false
