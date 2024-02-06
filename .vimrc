@@ -163,6 +163,9 @@ map <S-F11> :!perl -c %<CR>
 " python syntax validation
 map <F12> :!sudo python3 -m py_compile %<CR>
 
+" SQL syntax validation TODO: Q&D for now - using https://github.com/markdrago/pgsanity and docker
+map <S-F10> :!docker run --rm -it -v $PWD:/host -w /host pgsanity %<CR>
+
 " switch off Q command mode for unintentional annoyance
 nnoremap Q <NOP>
 
