@@ -47,6 +47,7 @@ autocmd BufNewFile,BufRead *.gql set ft=python
 
 " terraform files
 autocmd BufNewFile,BufRead *.tf set ft=python
+autocmd BufNewFile,BufRead *.tfvars set ft=python
 
 " 80 chars ruler colour
 highlight ColorColumn ctermbg=Brown

@@ -59,3 +59,5 @@ alias dup='xfce4-terminal --geometry "${COLUMNS}x${LINES}" --working-directory="
 alias psdocker='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}\t{{.Names}}"'
 
 GLOBIGNORE=.:..
+
+export GTK_CSD=1
