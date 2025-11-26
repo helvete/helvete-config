@@ -49,6 +49,9 @@ cdr() {
 cdd() {
 	cd ~/database/
 }
+uuid4() {
+    tee < /proc/sys/kernel/random/uuid
+}
 
 vimf() {
     vim $(find . -name "*$1*")
