@@ -102,7 +102,7 @@ endif
 " Convert file type to unix
 :command! ToUnix set ff=unix
 " Format json
-:command! JSON :%!python -mjson.tool --no-ensure-ascii
+:command! JSON :%!python -mjson.tool --no-ensure-ascii --sort-keys
 " Prepare XML for the default formatter (`gg=G`)
 :command! XML :%s/></>\r</g
 " Resource config
